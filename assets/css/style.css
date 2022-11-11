@@ -1,0 +1,18 @@
+header
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+#high-score
+{
+    color: rgb(221, 32, 228);
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+#timer
+{
+    padding-right: 10px;
+    font-size: 25px;
+}
