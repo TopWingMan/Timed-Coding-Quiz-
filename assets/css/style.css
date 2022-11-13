@@ -35,7 +35,7 @@ header
     flex-direction: column;
     padding-left: 25%;
     justify-content: space-around;
-    height: 500px;  /*was 500*/
+    height: 600px;  /*was 500*/
     font-size: 70px;
 }
 
@@ -83,7 +83,7 @@ header
     color: white;
     border: none;
     border-radius: 5px;
-    width: 220px;
+    width: 320px;
     height: 80px;
     display: flex;
     align-items: center;
