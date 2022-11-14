@@ -50,6 +50,11 @@ header
     pointer-events: none;
 }
 
+#feedback-5
+{
+    bottom: 100px;
+}
+
 #question-page-1
 {
     display: none;
@@ -107,4 +112,33 @@ header
     justify-content: center;
     align-items: center;
     padding: none;
+}
+
+#game-over-screen
+{
+    display: flex;
+    display: none;
+    flex-direction: column;
+}
+
+.GameOverHeader
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 25%;
+    justify-content: space-around;
+    height: 100px;  /*was 500*/
+    font-size: 70px;
+}
+
+.GameOver
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 25%;
+    justify-content: space-around;
+    height: 250px;
+    font-size: 30px;
 }

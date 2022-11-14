@@ -14,7 +14,16 @@ var feedback1 = document.querySelector('#feedback-1');
 var feedback2 = document.querySelector('#feedback-2');
 var feedback3 = document.querySelector('#feedback-3');
 var feedback4 = document.querySelector('#feedback-4');
-var feedback5 = document.querySelector('#feedback-5'); //this one is not used yet but will be
+var feedback5 = document.querySelector('#feedback-5');
+
+var finalScore = document.querySelector('#final-score-text');
+var finalScoreText0 = '<p>Your final score is 0</p>';
+var finalScoreText1 = '<p>Your final score is 1</p>';
+var finalScoreText2 = '<p>Your final score is 2</p>';
+var finalScoreText3 = '<p>Your final score is 3</p>';
+var finalScoreText4 = '<p>Your final score is 4</p>';
+var finalScoreText5 = '<p>Your final score is 5</p>';
+var score = 0;
 
 setInterval(function()
 {
@@ -38,7 +47,11 @@ document.getElementById("question-button-1-1").addEventListener("click", functio
     feedback1.innerHTML = answerFeedbackWrong;
     document.getElementById("question-page-2").style.display = "flex";
     document.getElementById("question-page-1").style.display = "none";
-    document.getElementById("feedback").style.display = "flex";
+    document.getElementById("feedback-1").style.display = "flex";
+    document.getElementById("feedback-2").style.display = "flex";
+    document.getElementById("feedback-3").style.display = "flex";
+    document.getElementById("feedback-4").style.display = "flex";
+    document.getElementById("feedback-5").style.display = "flex";
     incorrectAnswer();
 })
 document.getElementById("question-button-1-2").addEventListener("click", function page2(event)
@@ -46,7 +59,11 @@ document.getElementById("question-button-1-2").addEventListener("click", functio
     feedback1.innerHTML = answerFeedbackWrong;
     document.getElementById("question-page-2").style.display = "flex";
     document.getElementById("question-page-1").style.display = "none";
-    document.getElementById("feedback").style.display = "flex";
+    document.getElementById("feedback-1").style.display = "flex";
+    document.getElementById("feedback-2").style.display = "flex";
+    document.getElementById("feedback-3").style.display = "flex";
+    document.getElementById("feedback-4").style.display = "flex";
+    document.getElementById("feedback-5").style.display = "flex";
     incorrectAnswer();
 })
 document.getElementById("question-button-1-3").addEventListener("click", function page2(event) //Correct answer
@@ -54,15 +71,24 @@ document.getElementById("question-button-1-3").addEventListener("click", functio
     feedback1.innerHTML = answerFeedbackCorrect;
     document.getElementById("question-page-2").style.display = "flex";
     document.getElementById("question-page-1").style.display = "none";
-    document.getElementById("feedback").style.display = "flex";
-    answer1 = "Correct!";
+    document.getElementById("feedback-1").style.display = "flex";
+    document.getElementById("feedback-2").style.display = "flex";
+    document.getElementById("feedback-3").style.display = "flex";
+    document.getElementById("feedback-4").style.display = "flex";
+    document.getElementById("feedback-5").style.display = "flex";
+    score ++;
+    console.log("score = " + score);
 })
 document.getElementById("question-button-1-4").addEventListener("click", function page2(event)
 {
     feedback1.innerHTML = answerFeedbackWrong;
     document.getElementById("question-page-2").style.display = "flex";
     document.getElementById("question-page-1").style.display = "none";
-    document.getElementById("feedback").style.display = "flex";
+    document.getElementById("feedback-1").style.display = "flex";
+    document.getElementById("feedback-2").style.display = "flex";
+    document.getElementById("feedback-3").style.display = "flex";
+    document.getElementById("feedback-4").style.display = "flex";
+    document.getElementById("feedback-5").style.display = "flex";
     incorrectAnswer();
 })
 
@@ -86,7 +112,7 @@ document.getElementById("question-button-2-3").addEventListener("click", functio
     feedback2.innerHTML = answerFeedbackCorrect;
     document.getElementById("question-page-3").style.display = "flex";
     document.getElementById("question-page-2").style.display = "none";
-    answer2 = "Correct!";
+    score ++; console.log("score = " + score);
 })
 document.getElementById("question-button-2-4").addEventListener("click", function page3(event)
 {
@@ -123,7 +149,7 @@ document.getElementById("question-button-3-4").addEventListener("click", functio
     feedback3.innerHTML = answerFeedbackCorrect;
     document.getElementById("question-page-4").style.display = "flex";
     document.getElementById("question-page-3").style.display = "none";
-    answer3 = "Correct!";
+    score ++; console.log("score = " + score);
 })
 
 //question page 4
@@ -146,7 +172,7 @@ document.getElementById("question-button-4-3").addEventListener("click", functio
     feedback4.innerHTML = answerFeedbackCorrect;
     document.getElementById("question-page-5").style.display = "flex";
     document.getElementById("question-page-4").style.display = "none";
-    answer4 = "Correct!";
+    score ++; console.log("score = " + score);
 })
 document.getElementById("question-button-4-4").addEventListener("click", function page5(event)
 {
@@ -159,34 +185,42 @@ document.getElementById("question-button-4-4").addEventListener("click", functio
 //question page 5
 document.getElementById("question-button-5-1").addEventListener("click", function page6(event)
 {
-    //feedback5.innerHTML = answerFeedbackWrong;
+    feedback5.innerHTML = answerFeedbackWrong;
+    GameOver();
     //go to score page
+    document.getElementById("game-over-screen").style.display = "flex";
     document.getElementById("question-page-5").style.display = "none";
     incorrectAnswer();
     logAnswers();
 })
 document.getElementById("question-button-5-2").addEventListener("click", function page6(event)
 {
-    //feedback5.innerHTML = answerFeedbackWrong;
+    feedback5.innerHTML = answerFeedbackWrong;
+    GameOver();
     //go to score page
+    document.getElementById("game-over-screen").style.display = "flex";
     document.getElementById("question-page-5").style.display = "none";
     incorrectAnswer();
     logAnswers();
 })
 document.getElementById("question-button-5-3").addEventListener("click", function page6(event)
 {
-    //feedback5.innerHTML = answerFeedbackWrong;
+    feedback5.innerHTML = answerFeedbackWrong;
+    GameOver();
     //go to score page
+    document.getElementById("game-over-screen").style.display = "flex";
     document.getElementById("question-page-5").style.display = "none";
     incorrectAnswer();
     logAnswers();
 })
 document.getElementById("question-button-5-4").addEventListener("click", function page6(event) //correct answer
 {
-    //feedback5.innerHTML = answerFeedbackCorrect;
+    feedback5.innerHTML = answerFeedbackCorrect;
+    score ++; console.log("score = " + score);
+    GameOver();
     //go to score page
+    document.getElementById("game-over-screen").style.display = "flex";
     document.getElementById("question-page-5").style.display = "none";
-    answer5 = "Correct!";
     logAnswers();
 })
 
@@ -197,5 +231,18 @@ function logAnswers()
 
 function incorrectAnswer()
 {
-    countdown -= 10;
+    countdown -= 20;
+}
+
+function GameOver()
+{
+    console.log("score before check = " + score);
+    if(score == 0) {finalScore.innerHTML = finalScoreText0;}
+    else if(score == 1) {finalScore.innerHTML = finalScoreText1;}
+    else if(score == 2) {finalScore.innerHTML = finalScoreText2;}
+    else if(score == 3) {finalScore.innerHTML = finalScoreText3;}
+    else if(score == 4) {finalScore.innerHTML = finalScoreText4;}
+    else if(score == 5) {finalScore.innerHTML = finalScoreText5;}
+
+    console.log(score);
 }
