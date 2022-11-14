@@ -34,6 +34,15 @@ setInterval(function()
         countdown--;
         document.getElementById("timer").innerHTML = "Timer: " + countdown;
     }
+    else if(countdown <= 0)
+    {
+        document.getElementById("game-over-screen").style.display = "flex";
+        document.getElementById("question-page-1").style.display = "none";
+        document.getElementById("question-page-2").style.display = "none";
+        document.getElementById("question-page-3").style.display = "none";
+        document.getElementById("question-page-4").style.display = "none";
+        document.getElementById("question-page-5").style.display = "none";
+    }
 }, 1000)
 
 document.getElementById("start-button").addEventListener("click", function question1Button(event)
@@ -233,7 +242,7 @@ function logAnswers()
 
 function incorrectAnswer()
 {
-    countdown -= 20;
+    countdown -= 10;
 }
 
 function GameOver()
