@@ -45,6 +45,8 @@ header
     color: rgba(128, 128, 128, 0.8);
     font-size: 70px;
     /* display: none; */
+    position: absolute;
+    bottom: 0px;
 }
 
 #question-page-1
