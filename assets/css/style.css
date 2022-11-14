@@ -39,14 +39,15 @@ header
     font-size: 70px;
 }
 
-#feedback
+.feedback
 {
     padding-left: 25%;
     color: rgba(128, 128, 128, 0.8);
     font-size: 70px;
     /* display: none; */
     position: absolute;
-    bottom: 0px;
+    bottom: -60px;
+    pointer-events: none;
 }
 
 #question-page-1
