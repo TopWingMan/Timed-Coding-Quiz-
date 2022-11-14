@@ -111,7 +111,7 @@
             <h1 class="GameOverHeader">All done!</h1>
             <div class="GameOver">
                 <p id="final-score-text">Your final score is __</p>
-                <p>Enter initials: </p>
+                <form id="initials" class="pure-form">Enter initials: <input type="text" id="initials" placeholder="Your Initials"> </form>
             </div>
             <h1 id="feedback-5" class="feedback">
                 __________________________________ <br>
@@ -119,9 +119,13 @@
             </h1>
         </div>
 
-        <!-- Score Screen -->
-        <div>
-
+        <!-- High Score Screen -->
+        <div id="highscore-page">
+            <h1>High Scores</h1>
+            <div id="highscore-btn-container">
+                <button id="highscore-btn" class="button" type="button">Go back</button>
+                <button id="highscore-btn" class="button" type="button">Clear high scores</button>
+            </div>
         </div>
 
 

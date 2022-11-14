@@ -25,6 +25,8 @@ var finalScoreText4 = '<p>Your final score is 4</p>';
 var finalScoreText5 = '<p>Your final score is 5</p>';
 var score = 0;
 
+var intialsInput = document.getElementById('initials');
+
 setInterval(function()
 {
     if (countdown > 0 && startCountDown === true)
@@ -246,3 +248,11 @@ function GameOver()
 
     console.log(score);
 }
+
+document.querySelector('form.pure-form').addEventListener('submit', function(e)
+{
+    e.preventDefault();
+    document.getElementById("highscore-page").style.display = "flex";
+    document.getElementById("game-over-screen").style.display = "none";
+    console.log(intialsInput.value);
+})
